@@ -1,0 +1,17 @@
+.not-found-container {
+  ::ng-deep {
+    .not-found-container__img {
+      width: calc(100vw - 72px - 64px);
+      height: calc(100vh - 192px);
+
+      mat-icon {
+        width: auto;
+        height: 100%;
+      }
+
+      &-link {
+        height: fit-content !important;
+      }
+    }
+  }
+}

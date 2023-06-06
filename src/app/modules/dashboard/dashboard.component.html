@@ -1,0 +1,10 @@
+<div *ngIf="(count$ | async) as f">
+    {{f}}
+</div>
+
+<div class="flex">
+    <button liburgBtx (click)="increment()">
+       increment
+    </button>
+
+</div>
