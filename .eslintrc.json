@@ -23,9 +23,12 @@
           "error",
           {
             "type": "element",
-            "prefix": "shell-rabit",
+            "prefix": "shell-rabbit",
             "style": "kebab-case"
           }
+        ],
+        "newline-per-chained-call": [
+          "error"
         ]
       }
     },

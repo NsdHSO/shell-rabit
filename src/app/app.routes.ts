@@ -7,6 +7,7 @@ export const appRoutes: Route[] = [
             import('./modules/dashboard/dashboard.component').then(
                 (c) => c.DashboardComponent
             ),
+
     },
     {
         path: 'notFound',

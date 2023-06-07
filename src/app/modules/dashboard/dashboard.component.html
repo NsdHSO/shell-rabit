@@ -1,10 +1,13 @@
-<div *ngIf="(count$ | async) as f">
-    {{f}}
-</div>
-
-<div class="flex">
-    <button liburgBtx (click)="increment()">
-       increment
-    </button>
-
+<div *ngIf="($data | async) as dahsboardReducer"
+     class="dashboard-container">
+    <div *ngFor="let entry of dahsboardReducer.cards.entry"
+         ngxJumbotron>
+        <shell-rabbit-card [icon]="entry.category_icon" [name]="entry.category_name" [ranting]="entry.avg_cost"></shell-rabbit-card>
+    </div>
+    <ng-container *ngIf="dahsboardReducer.loading">
+        Loading
+    </ng-container>
+    <div *ngIf="dahsboardReducer.failed">
+        Failed
+    </div>
 </div>

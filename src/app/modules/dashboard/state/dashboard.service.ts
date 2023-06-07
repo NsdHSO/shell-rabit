@@ -5,9 +5,10 @@ import {environment} from "../../../../environments/environment";
 @Injectable({
     providedIn: 'root'
 })
-export class DashboardCountService {
-    getCountRabbit$ = this._http.get(`${environment.apiProducts}/rabbit/count`)
+export class DashboardService {
+    getCountRabbit$ = this._http.get(`${environment.apiProducts}/rabbit/cards`)
 
     constructor(private readonly _http: HttpClient) {
     }
+
 }
