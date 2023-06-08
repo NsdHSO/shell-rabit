@@ -16,6 +16,7 @@ export const appRoutes: Route[] = [
                 (c) => c.NotFoundComponent
             ),
     },
+    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     {
         path: '**',
         redirectTo: 'notFound',
