@@ -15,6 +15,44 @@
       }
     }
     &-title{
+      display: flex;
+      div{
+        color: #6c6c6c;
+      }
     }
+  }
+
+  .gauge-container {
+    position: relative;
+    width: 70%;
+    height: 100%;
+  }
+
+  .gauge {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    &-text {
+      transform: translate(100%, 110%) rotate(180deg);
+      text-anchor: middle;
+      stroke-width: 1 !important;
+      stroke-dasharray: none;
+    }
+  }
+
+  .gauge-circle {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 10;
+  }
+  .gauge-progress {
+    fill: none;
+    stroke: #273239;
+    stroke-width: 10;
+    transform-origin: center;
+    transform: rotate(-180deg);
+    transition: stroke-dashoffset .5s ease-in-out;
   }
 }

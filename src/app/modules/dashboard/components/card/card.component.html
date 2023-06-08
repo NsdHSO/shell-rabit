@@ -1,13 +1,24 @@
 <div class="card-container">
     <div class="card-container__header">
         <div class="card-container__header-icon">
-            <mat-icon [svgIcon]="icon" ></mat-icon>
+            <mat-icon [svgIcon]="icon.toString()"></mat-icon>
         </div>
         <div class="card-container__header-title">
-            {{name}}
+            <div>
+                Name:
+            </div>
+            <p>
+                {{ name }}
+            </p>
         </div>
     </div>
-    <div>
-        {{ranting}}
+    <div class="card-container__content">
+        <div class="gauge-container">
+            <svg #gaugeProgress class="gauge-progress" viewBox="0 0 100 100">
+                <circle class="gauge-circle" cx="50" cy="50" r="40"></circle>
+                <circle class="gauge-fill" cx="50" cy="50" r="40"></circle>
+                <text #gaugeText class="gauge-text" x="50" y="55">0%</text>
+            </svg>
+        </div>
     </div>
 </div>

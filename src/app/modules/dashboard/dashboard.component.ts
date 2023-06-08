@@ -23,10 +23,13 @@ export class DashboardComponent {
     $data = this.store.select(selectCards)
 
     constructor(private store: Store<any>,) {
+
     }
 
     ngOnInit() {
         this.store.dispatch(initDashboard())
     }
+
+
 
 }
