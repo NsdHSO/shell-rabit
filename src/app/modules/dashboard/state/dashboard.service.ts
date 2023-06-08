@@ -9,5 +9,4 @@ export class DashboardService {
 
     constructor(private readonly _http: HttpClient) {
     }
-
 }
