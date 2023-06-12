@@ -30,7 +30,7 @@ export const dashboardReducer = createReducer(initialDashboardState,
             payload) => ({
             ... state,
             cards : {
-                entry : payload.cards,
+                entry : payload.cards.map((value: any) => ({name: value.category_name, ranting: value.avg_ranting, icon: value.category_icon})),
                 loading : false,
                 failed: false
             }

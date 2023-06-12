@@ -1,31 +1,40 @@
-.card-container{
+.card-container {
   display: flex;
   flex-direction: column;
   width: 15rem;
   height: 10rem;
-  &__header{
+
+  &__header {
     display: inherit;
 
-    &-icon{
+    &-icon {
       width: 5rem;
       height: 5rem;
-      mat-icon{
+
+      mat-icon {
         width: 5rem;
         height: 5rem;
       }
     }
-    &-title{
+
+    &-title {
       display: flex;
-      div{
+
+      div {
         color: #6c6c6c;
       }
     }
   }
 
+
   .gauge-container {
     position: relative;
-    width: 70%;
+    width: 50%;
     height: 100%;
+
+    svg {
+      transform: translate(94px, -37px) rotate(-180deg) !important;
+    }
   }
 
   .gauge {
@@ -47,6 +56,7 @@
     stroke: #ccc;
     stroke-width: 10;
   }
+
   .gauge-progress {
     fill: none;
     stroke: #273239;
