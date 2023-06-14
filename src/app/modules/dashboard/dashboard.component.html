@@ -1,10 +1,10 @@
-<div *ngIf="($data | async) as dahsboardReducer"
+<div *ngIf="(data()) as dahsboardReducer"
      class="dashboard-container">
     <lib-carousel [items]="dahsboardReducer.cards.entry"></lib-carousel>
-    <ng-container *ngIf="dahsboardReducer.loading">
+    <ng-container *ngIf="dahsboardReducer.cards.loading">
         Loading
     </ng-container>
-    <div *ngIf="dahsboardReducer.failed">
+    <div *ngIf="dahsboardReducer.cards.failed">
         Failed
     </div>
 </div>

@@ -40,6 +40,7 @@ export const dashboardReducer = createReducer(initialDashboardState,
                 })),
                 loading : false,
                 failed : false
+
             }
         })),
     on(failedLoadDashboard,
